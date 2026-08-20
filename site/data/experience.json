@@ -1,0 +1,30 @@
+[
+  {
+    "role": "Software Automation Specialist",
+    "org": "Spinners Creative Agency (Dubai, UAE - Remote)",
+    "dateRange": "Jul 2024 \u2013 Jul 2025",
+    "metrics": [
+      { "number": "5", "label": "AI pipelines" },
+      { "number": "3+ hrs/wk", "label": "manual work cut" },
+      { "number": "6", "label": "intl. clients (3x avg.)" }
+    ],
+    "bullets": [
+      "Engineered AI-powered pipelines (n8n, Power Automate, Google Sheets, Lemlist) \u2014 cutting hours of manual data management across international client accounts.",
+      "Closed multiple international clients from a 100+ prospect pipeline by diagnosing automation gaps."
+    ]
+  },
+  {
+    "role": "Vice Head of HR",
+    "org": "IEEE ECU Student Branch (Cairo, Egypt)",
+    "dateRange": "Jun 2025 \u2013 Present",
+    "metrics": [
+      { "number": "150+", "label": "interviews processed" },
+      { "number": "40%", "label": "acceptance rate" },
+      { "number": "50+", "label": "members trained" }
+    ],
+    "bullets": [
+      "Built an automated candidate-scoring pipeline in Google Sheets across committee selections.",
+      "Trained committee members on structured recruitment frameworks; led the branch's largest event with 75+ attendees per session."
+    ]
+  }
+]

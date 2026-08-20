@@ -1,0 +1,3 @@
+- Email: ziadwaled4@gmail.com
+- GitHub: https://github.com/Zeyad-101
+- LinkedIn: https://www.linkedin.com/in/zeyad-waled-0100z001/

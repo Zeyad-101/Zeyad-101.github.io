@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Dashboard</title>
+  <link rel="icon" href="../site/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../site/css/styles.css">
+  <style>
+    body { padding: 40px; }
+    .tab-btn { background: transparent; border: 1px solid var(--hairline); color: var(--text-secondary); padding: 8px 16px; cursor: pointer; font-family: var(--font-mono); font-size: 14px; border-radius: 4px; }
+    .tab-btn.active { border-color: var(--cyan); color: var(--cyan); }
+    .tab-content { display: none; margin-top: 32px; }
+    .tab-content.active { display: block; }
+    
+    .item-card { border: 1px solid var(--hairline); padding: 24px; margin-bottom: 16px; border-radius: 4px; background: var(--surface-2); position: relative; }
+    .delete-btn { position: absolute; top: 16px; right: 16px; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid #ff5555; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; font-family: var(--font-mono); }
+    
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; margin-bottom: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); text-transform: uppercase; }
+    .form-group input, .form-group textarea { width: 100%; background: var(--void); border: 1px solid var(--hairline); color: var(--text-primary); font-family: var(--font-inter); padding: 12px; font-size: 14px; border-radius: 4px; }
+    .form-group textarea { height: 100px; resize: vertical; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--cyan); }
+    
+    .btn { background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--hairline); padding: 8px 16px; cursor: pointer; font-family: var(--font-mono); font-size: 14px; border-radius: 4px; transition: 0.2s; }
+    .btn:hover { border-color: var(--cyan); color: var(--cyan); }
+    .btn-primary { background: var(--cyan); color: var(--void); font-weight: bold; border-color: var(--cyan); }
+    .btn-primary:hover { background: #00e5ff; color: var(--void); }
+    
+    .array-item { display: flex; gap: 8px; margin-bottom: 8px; }
+    .array-item input { flex: 1; }
+    .remove-array-btn { background: transparent; border: 1px solid var(--hairline); color: var(--text-secondary); cursor: pointer; padding: 0 12px; border-radius: 4px; }
+    
+    .flex-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  </style>
+</head>
+<body class="bg-void text-text-primary min-h-screen font-inter">
+
+  <h1 class="font-inter font-black text-3xl mb-8 text-cyan">ZW_ Content Dashboard</h1>
+
+  <div class="flex gap-4 border-b border-hairline pb-4 mb-8">
+    <button class="tab-btn active" onclick="switchTab('projects')">Projects</button>
+    <button class="tab-btn" onclick="switchTab('experience')">Experience</button>
+    <button class="tab-btn" onclick="switchTab('skills')">Skills</button>
+    <button class="tab-btn" onclick="switchTab('achievements')">Achievements</button>
+  </div>
+
+  <div id="projects" class="tab-content active">
+    <div class="flex-header">
+      <h2 class="font-bold text-xl">Projects</h2>
+      <div>
+        <button class="btn" onclick="addProject()">+ Add Project</button>
+        <button class="btn btn-primary ml-2" onclick="saveData('projects')">Download projects.json</button>
+      </div>
+    </div>
+    <div id="projects-container"></div>
+  </div>
+
+  <div id="experience" class="tab-content">
+    <div class="flex-header">
+      <h2 class="font-bold text-xl">Experience</h2>
+      <div>
+        <button class="btn" onclick="addExperience()">+ Add Role</button>
+        <button class="btn btn-primary ml-2" onclick="saveData('experience')">Download experience.json</button>
+      </div>
+    </div>
+    <div id="experience-container"></div>
+  </div>
+
+  <div id="skills" class="tab-content">
+    <div class="flex-header">
+      <h2 class="font-bold text-xl">Skills</h2>
+      <div>
+        <button class="btn" onclick="addSkillCategory()">+ Add Category</button>
+        <button class="btn btn-primary ml-2" onclick="saveData('skills')">Download skills.json</button>
+      </div>
+    </div>
+    <div id="skills-container"></div>
+  </div>
+
+  <div id="achievements" class="tab-content">
+    <div class="flex-header">
+      <h2 class="font-bold text-xl">Achievements</h2>
+      <div>
+        <button class="btn" onclick="addAchievement()">+ Add Achievement</button>
+        <button class="btn btn-primary ml-2" onclick="saveData('achievements')">Download achievements.json</button>
+      </div>
+    </div>
+    <div id="achievements-container"></div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

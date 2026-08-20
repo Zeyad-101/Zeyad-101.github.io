@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "jobops",
+    "tag": "Open Source",
+    "title": "JobOps",
+    "note": "",
+    "description": "Self-hosted job-tracking monorepo with 800+ users. Ranked #7 on contributor leaderboard. Built scrapers using Cheerio plugin pattern and fixed CI/Docker configs.",
+    "highlights": [
+      "Built WUZZUF & Khamsat scrapers via Cheerio",
+      "Fixed CI failures and Docker config issues",
+      "Contributed 4 merged PRs to monorepo"
+    ],
+    "stack": ["TypeScript", "Node.js", "Cheerio", "Docker"],
+    "mediaFolder": "projects/jobops",
+    "cta": "View contribution ->",
+    "ctaLink": "https://github.com/Zeyad-101/job-ops",
+    "featured": false,
+    "mediaPlaceholder": "+ add screenshot / GIF"
+  },
+  {
+    "slug": "ai-automation-pipelines",
+    "tag": "Client Work",
+    "title": "AI Automation Pipelines",
+    "note": "",
+    "description": "Designed and deployed multi-stage AI pipelines saving creative agencies 3+ hours per week per client on manual prospecting and data entry.",
+    "highlights": [
+      "Automated Google Sheets / CRM syncs",
+      "Integrated OpenAI for data categorization",
+      "Handled custom webhook error fallbacks"
+    ],
+    "stack": ["n8n", "Power Automate", "AI APIs"],
+    "mediaFolder": "projects/ai-automation",
+    "cta": "Read case study ->",
+    "ctaLink": "projects/ai-automation-pipelines.html",
+    "featured": false,
+    "mediaPlaceholder": "+ add pipeline diagram / GIF"
+  },
+  {
+    "slug": "hospital-management-system",
+    "tag": "Academic",
+    "title": "Hospital Management System",
+    "note": "",
+    "description": "Desktop application built from scratch in C++ and Qt6 managing patients, staff, and medical records securely.",
+    "highlights": [
+      "Clean OOP architecture & data structures",
+      "GUI built completely in code (no Qt Designer)"
+    ],
+    "stack": ["C++17", "Qt 6", "OOP", "Data Structures"],
+    "mediaFolder": "projects/hms",
+    "cta": "View source ->",
+    "ctaLink": "https://github.com/Zeyad-101/Hospital_System",
+    "featured": false,
+    "mediaPlaceholder": "+ add UI screenshot"
+  }
+]

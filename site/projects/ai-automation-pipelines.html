@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automation Pipelines — Zeyad Waled</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="sticky backdrop-blur nav-bar border-b-hairline py-3 px-6 md:px-8 flex justify-between items-center z-50">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <div class="w-3 h-3 bg-cyan"></div>
+        <span class="font-mono text-text-primary font-bold tracking-tight">ZEYAD WALED</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="../index.html#projects" class="font-mono text-cyan text-sm hover:underline">
+        <- Back to Projects
+      </a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="min-h-screen container py-12 md:py-24 px-8 md:px-16 max-w-3xl">
+    <article class="prose">
+      <h1>AI Automation Pipelines</h1>
+      
+      <p>Built AI-powered automation pipelines that cut repetitive data-management work across international client accounts.</p>
+      
+      <h2>The Problem</h2>
+      <p>At Spinners Creative Agency, our team was managing multiple international client accounts, which inherently involved a massive amount of repetitive data-management work. From scraping leads and qualifying them to running outreach campaigns and updating CRMs, the manual overhead was severe. This manual data-management and outreach was eating up recurring time across client accounts, slowing down our ability to scale and causing inevitable human errors.</p>
+      <p>We needed a way to automate the top-of-funnel operations without losing the personalization and accuracy required for high-stakes international clients. The goal was to eliminate at least a few hours of manual work per week while actually improving the conversion rate.</p>
+      
+      <h2>The Approach</h2>
+      <p>I decided to build a series of AI-powered automation pipelines using a combination of low-code tools and custom scripts. The core stack included <strong>n8n</strong>, <strong>Microsoft Power Automate</strong>, <strong>Google Sheets</strong>, and <strong>Lemlist</strong>.</p>
+      <ul>
+        <li><strong>Lead Scraping and Enrichment</strong>: I used n8n to orchestrate workflows that would pull data from various sources. We integrated AI nodes to analyze and enrich the lead data, categorizing them based on their potential fit for our clients.</li>
+        <li><strong>Data Management</strong>: Google Sheets acted as our dynamic database. Power Automate workflows were set up to synchronize data between our initial data sources, the enriched data from n8n, and our outreach platforms.</li>
+        <li><strong>Automated Outreach</strong>: Lemlist was used to run the actual outreach campaigns. The pipelines automatically fed highly qualified and enriched leads into Lemlist, triggering personalized email sequences.</li>
+      </ul>
+      
+      <h2>Trade-offs and Decisions</h2>
+      <p>One of the major decisions was choosing between building a fully custom backend (e.g., using Node.js and a traditional database) versus leveraging low-code platforms like n8n and Power Automate.</p>
+      <p>I opted for the low-code approach for several reasons:</p>
+      <ul>
+        <li><strong>Speed of Delivery</strong>: We needed solutions quickly. n8n allowed me to visually map out complex logic and API integrations in a fraction of the time it would take to write from scratch.</li>
+        <li><strong>Maintainability</strong>: Other team members could visually understand the workflows and make minor adjustments without needing to dive into code.</li>
+        <li><strong>Flexibility</strong>: Adapting to different clients' CRMs and requirements was much faster when swapping out nodes in a workflow compared to refactoring custom code.</li>
+      </ul>
+      <p>However, this came with trade-offs. Debugging complex workflows in visual builders can sometimes be more frustrating than standard stack traces. We also had to be careful about API rate limits across different platforms since we were heavily relying on third-party integrations.</p>
+      
+      <h2>The Result</h2>
+      <p>The impact was immediate and measurable. I built <strong>5 automation pipelines</strong> that successfully eliminated <strong>3+ hours/week of manual work</strong>.</p>
+      <p>More importantly, because the data was enriched and targeted more effectively by our AI integrations, our outreach became much more successful. We closed <strong>6 international clients</strong> from a 100+ prospect pipeline. This translated to roughly a <strong>6% conversion rate</strong>, significantly outperforming the industry average of ~2% (a 3x benchmark).</p>
+      
+      <h2>What I Would Do Differently</h2>
+      <p>If I were to rebuild these pipelines today, I would invest more time early on in establishing centralized error handling and alerting. When a pipeline fails (e.g., due to a changed third-party API endpoint), it's crucial to know immediately before it impacts a client's campaign. Implementing a standardized logging system across all n8n workflows would make maintenance even easier at scale.</p>
+      
+      <hr>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-hairline flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-3 h-3 bg-cyan"></div>
+      <span class="font-mono text-text-secondary text-sm">© 2026 Zeyad Waled</span>
+    </div>
+    <div class="font-mono text-text-secondary text-xs flex items-center gap-4">
+      <span><span class="text-status-green">●</span> All systems operational</span>
+    </div>
+  </footer>
+
+</body>
+</html>
