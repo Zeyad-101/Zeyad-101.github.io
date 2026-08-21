@@ -31,7 +31,7 @@
     "stack": ["n8n", "Power Automate", "AI APIs"],
     "mediaFolder": "projects/ai-automation",
     "cta": "Read case study ->",
-    "ctaLink": "projects/ai-automation-pipelines.html",
+    "ctaLink": "ai-automation-pipelines.html",
     "featured": false,
     "mediaPlaceholder": "+ add pipeline diagram / GIF"
   },

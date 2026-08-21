@@ -8,10 +8,10 @@ let data = {
 async function init() {
   try {
     const [p, e, s, a] = await Promise.all([
-      fetch('../site/data/projects.json').then(r => r.json()),
-      fetch('../site/data/experience.json').then(r => r.json()),
-      fetch('../site/data/skills.json').then(r => r.json()),
-      fetch('../site/data/achievements.json').then(r => r.json())
+      fetch('../data/projects.json').then(r => r.json()),
+      fetch('../data/experience.json').then(r => r.json()),
+      fetch('../data/skills.json').then(r => r.json()),
+      fetch('../data/achievements.json').then(r => r.json())
     ]);
     data.projects = p;
     data.experience = e;

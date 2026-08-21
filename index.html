@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeyad Waled | SWE Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-void text-text-primary min-h-screen font-inter overflow-x-hidden">
+
+  <!-- Fake Terminal Header -->
+  <div class="terminal-chrome sticky top-0 z-50">
+    <div class="terminal-controls">
+      <div class="terminal-btn close"></div>
+      <div class="terminal-btn minimize"></div>
+      <div class="terminal-btn maximize"></div>
+    </div>
+    <div class="terminal-title">~/zeyad-waled/portfolio</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="sticky top-[32px] backdrop-blur nav-bar border-b-hairline py-3 px-6 md:px-8 flex justify-between items-center z-50">
+    <div class="flex items-center gap-2">
+      <a href="#about" class="font-mono text-xs text-text-secondary hover:text-cyan transition-colors">about</a>
+      <a href="#projects" class="font-mono text-xs text-text-secondary hover:text-cyan transition-colors">projects</a>
+      <a href="#experience" class="font-mono text-xs text-text-secondary hover:text-cyan transition-colors">experience</a>
+      <a href="#skills" class="font-mono text-xs text-text-secondary hover:text-cyan transition-colors">skills</a>
+      <a href="#contact" class="font-mono text-xs text-text-secondary hover:text-cyan transition-colors">contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://github.com/Zeyad-101" target="_blank" class="social-chip hover:text-cyan hover:border-cyan transition-colors">GH</a>
+      <a href="https://www.linkedin.com/in/zeyad-waled-0100z001/" target="_blank" class="social-chip hover:text-cyan hover:border-cyan transition-colors">IN</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="min-h-[85vh] flex flex-col md:flex-row items-center justify-between container py-12 md:py-0 px-8 md:px-16 gap-12 relative fade-in">
+    <div class="flex-1 space-y-6 md:space-y-8 max-w-2xl">
+      <div class="space-y-2">
+        <h1 class="font-inter font-black text-5xl md:text-[60px] leading-tight text-text-primary tracking-tight">
+          Zeyad <br/> Waled
+        </h1>
+        <div id="typing-text" class="font-mono text-cyan text-sm md:text-base whitespace-pre-wrap min-h-[80px]"></div>
+      </div>
+      
+      <p class="font-inter text-text-secondary text-base md:text-lg leading-150 max-w-lg">
+        I build high-performance software, AI workflows, and resilient automation systems.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a href="#projects" class="btn-primary">
+          View Projects <span class="ml-2 font-mono">-></span>
+        </a>
+        <a href="assets/Zeyad_Waled_CV.pdf" download="Zeyad_Waled_CV.pdf" class="btn-secondary">
+          CV <span class="ml-2">↓</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side Avatar -->
+    <div class="flex-1 flex justify-center md:justify-end w-full relative">
+      <div class="card p-2 md:p-4 rotate-1 max-w-[340px] w-full">
+        <!-- Replaced empty media slot with actual image tag -->
+        <img src="assets/avatar.png" alt="Zeyad Waled" class="media-slot h-64 md:h-80 w-full object-cover">
+      </div>
+      <!-- Decorative element -->
+      <div class="absolute -bottom-8 -right-8 text-cyan opacity-20 font-mono text-9xl font-black pointer-events-none hidden md:block select-none">
+        Z_
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section id="projects" class="container py-24 px-8 md:px-16 space-y-12 relative fade-in">
+    <div class="border-b border-hairline pb-4 flex justify-between items-end">
+      <h2 class="font-inter font-black text-3xl md:text-5xl text-text-primary tracking-tight">Work</h2>
+      <span class="font-mono text-text-secondary text-sm hidden md:block">01 // SELECT * FROM projects</span>
+    </div>
+
+    <div id="projects-list" class="space-y-8">
+      <!-- Projects will be injected here dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="container py-24 px-8 md:px-16 space-y-12 relative fade-in">
+    <div class="border-b border-hairline pb-4 flex justify-between items-end">
+      <h2 class="font-inter font-black text-3xl md:text-5xl text-text-primary tracking-tight">Experience</h2>
+    </div>
+
+    <div id="experience-list" class="space-y-[44px] ml-4">
+      <!-- Experience items will be injected here dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container py-24 px-8 md:px-16 space-y-12 relative fade-in">
+    <div class="border-b border-hairline pb-4 flex justify-between items-end">
+      <h2 class="font-inter font-black text-3xl md:text-5xl text-text-primary tracking-tight">Stack</h2>
+    </div>
+
+    <div id="skills-list" class="flex flex-col gap-8">
+      <!-- Skills categories will be injected here dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="container py-24 px-8 md:px-16 space-y-12 relative fade-in">
+    <div class="border-b border-hairline pb-4 flex justify-between items-end">
+      <h2 class="font-inter font-black text-3xl md:text-5xl text-text-primary tracking-tight">Achievements</h2>
+    </div>
+
+    <div id="achievements-list" class="flex flex-col gap-8">
+      <!-- Achievements will be injected here dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="container px-8 md:px-16 pb-12 pt-24 fade-in">
+    <div class="border-t border-hairline pt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      
+      <div class="space-y-2">
+        <h2 class="font-inter font-bold text-2xl text-text-primary">Let's build together.</h2>
+        <p class="font-mono text-text-secondary text-sm">Open to software engineering roles & freelance automation.</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-6">
+        <button id="btn-copy-email" class="font-mono text-cyan text-sm hover:underline text-left">
+          Get in touch
+        </button>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ziadwaled4@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center text-text-secondary hover:text-cyan transition-colors group">
+          <span class="font-mono text-sm">Email</span>
+          <span class="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">-></span>
+        </a>
+        <a href="https://github.com/Zeyad-101" target="_blank" class="flex items-center text-text-secondary hover:text-cyan transition-colors group">
+          <span class="font-mono text-sm">GitHub</span>
+          <span class="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">-></span>
+        </a>
+        <a href="https://www.linkedin.com/in/zeyad-waled-0100z001/" target="_blank" class="flex items-center text-text-secondary hover:text-cyan transition-colors group">
+          <span class="font-mono text-sm group-hover:underline">LinkedIn</span>
+        </a>
+      </div>
+
+      <!-- Right Column (JSON Card) -->
+      <div class="flex-1 w-full max-w-lg flex justify-end">
+        <div class="card p-6 md:p-8 w-full border-hairline">
+          <pre class="font-mono text-sm text-text-secondary overflow-x-auto no-scrollbar whitespace-pre-wrap">
+{
+  "name": "Zeyad Waled",
+  "role": "Software Engineering Student, ECU Cairo",
+  "focus": ["software engineering", "automation", "AI"],
+  "location": "Cairo, Egypt"
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-hairline flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-3 h-3 bg-cyan"></div>
+      <span class="font-mono text-text-secondary text-sm">© 2026 Zeyad Waled</span>
+    </div>
+    <div class="font-mono text-text-secondary text-xs flex items-center gap-4">
+      <span><span class="text-status-green">●</span> All systems operational</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
