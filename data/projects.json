@@ -18,24 +18,6 @@
     "mediaPlaceholder": "+ add screenshot / GIF"
   },
   {
-    "slug": "ai-automation-pipelines",
-    "tag": "Client Work",
-    "title": "AI Automation Pipelines",
-    "note": "",
-    "description": "Designed and deployed multi-stage AI pipelines saving creative agencies 3+ hours per week per client on manual prospecting and data entry.",
-    "highlights": [
-      "Automated Google Sheets / CRM syncs",
-      "Integrated OpenAI for data categorization",
-      "Handled custom webhook error fallbacks"
-    ],
-    "stack": ["n8n", "Power Automate", "AI APIs"],
-    "mediaFolder": "projects/ai-automation",
-    "cta": "Read case study ->",
-    "ctaLink": "ai-automation-pipelines.html",
-    "featured": false,
-    "mediaPlaceholder": "+ add pipeline diagram / GIF"
-  },
-  {
     "slug": "hospital-management-system",
     "tag": "Academic",
     "title": "Hospital Management System",

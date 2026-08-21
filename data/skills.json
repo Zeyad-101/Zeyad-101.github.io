@@ -2,21 +2,47 @@
   {
     "category": "Software Engineering",
     "primary": true,
-    "items": ["C++", "C", "Python", "TypeScript", "JavaScript", "SQL", "Node.js", "Qt6"]
+    "items": [
+      "C++",
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "Node.js",
+      "Qt6"
+    ]
   },
   {
     "category": "Automation & AI",
     "primary": false,
-    "items": ["n8n", "Microsoft Power Automate", "APIs", "Google Sheets", "Lemlist"]
+    "items": [
+      "n8n",
+      "Microsoft Power Automate",
+      "APIs",
+      "Google Sheets",
+      "Lemlist"
+    ]
   },
   {
     "category": "Development & Infrastructure",
     "primary": false,
-    "items": ["Git", "GitHub", "Docker", "Linux", "CI/CD"]
+    "items": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "CI/CD"
+    ]
   },
   {
     "category": "Other",
     "primary": false,
-    "items": ["Embedded C", "HTML", "CSS", "Figma", "Canva"]
+    "items": [
+      "Embedded C",
+      "HTML",
+      "CSS",
+      "Figma",
+      "Canva"
+    ]
   }
 ]
