@@ -1,7 +1,62 @@
 [
-  { "category": "Languages", "primary": true, "items": ["TypeScript", "JavaScript", "Python", "C++", "C", "SQL", "HTML/CSS"] },
-  { "category": "Frameworks", "primary": false, "items": ["React", "Next.js", "Node.js", "Vite", "Tailwind CSS", "Qt6", "PySide6"] },
-  { "category": "Data & Backend", "primary": false, "items": ["REST APIs", "Supabase", "Postgres", "SQLite", "Ollama", "Groq"] },
-  { "category": "Testing & Tooling", "primary": false, "items": ["Vitest", "pytest", "Git", "GitHub", "Docker", "Linux", "Chrome MV3"] },
-  { "category": "Embedded & Automation", "primary": false, "items": ["ESP32", "Arduino", "I2C", "OneWire", "n8n", "Power Automate"] }
+  {
+    "category": "Languages",
+    "primary": true,
+    "items": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C++",
+      "C",
+      "SQL",
+      "HTML/CSS"
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "primary": false,
+    "items": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Vite",
+      "Tailwind CSS",
+      "Qt6",
+      "PySide6"
+    ]
+  },
+  {
+    "category": "Data & Backend",
+    "primary": false,
+    "items": [
+      "REST APIs",
+      "Supabase",
+      "Postgres",
+      "Groq"
+    ]
+  },
+  {
+    "category": "Testing & Tooling",
+    "primary": false,
+    "items": [
+      "Vitest",
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "Chrome MV3"
+    ]
+  },
+  {
+    "category": "Embedded & Automation",
+    "primary": false,
+    "items": [
+      "ESP32",
+      "Arduino",
+      "I2C",
+      "OneWire",
+      "n8n",
+      "Power Automate"
+    ]
+  }
 ]
