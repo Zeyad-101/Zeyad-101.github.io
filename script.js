@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const terminalText = `> ./zeyad --status
 role: SWE Student
-focus: AI \u00b7 Automation \u00b7 OSS
-status: building`;
+focus: web \u00b7 AI \u00b7 OSS
+status: open to work`;
 
   const typingContainer = document.getElementById('typing-text');
   if (typingContainer) {
@@ -66,12 +66,15 @@ async function loadContent() {
 
     const projectsList = document.getElementById('projects-list');
     if (projectsList) {
+      const media = p => p.image
+        ? `<img src="${p.image}" alt="${p.imageAlt || p.title}" loading="lazy">`
+        : `<div class="terminal-card"><div class="terminal-chrome"><div class="terminal-dots"><div class="terminal-dot dot-red"></div><div class="terminal-dot dot-amber"></div><div class="terminal-dot dot-green"></div></div><div class="font-mono text-[12px] text-text-secondary">${p.slug}</div></div><pre class="font-mono text-sm text-cyan whitespace-pre-wrap p-4">${(p.terminal || []).join('\n')}</pre></div>`;
       projectsList.innerHTML = projects.map(p => `
-        <div class="card p-8 md:p-10 flex flex-col space-y-8">
+        <article class="card p-8 md:p-10 flex flex-col space-y-8">
           <div class="flex flex-col md:flex-row gap-8 justify-between">
             <div class="flex-1 space-y-4">
               <div class="flex items-center gap-3">
-                ${p.featured ? '<span class="bg-cyan-dim text-cyan font-mono text-xs px-2 py-1 rounded-[4px] uppercase tracking-widest">\u2605 FEATURED</span>' : ''}
+                ${p.featured ? '<span class="bg-cyan-dim text-cyan font-mono text-xs px-2 py-1 rounded-[4px] uppercase tracking-widest">★ Featured</span>' : ''}
                 <span class="font-mono text-text-secondary text-sm">${p.tag}</span>
               </div>
               <h3 class="font-inter font-bold text-3xl text-text-primary">${p.title}</h3>
@@ -82,18 +85,18 @@ async function loadContent() {
               <div class="flex flex-wrap gap-3 pt-2">
                 ${p.stack.map(s => `<span class="skill-chip-ghost text-sm px-4 py-2 rounded-[4px] font-inter">${s}</span>`).join('')}
               </div>
-              <div class="pt-4">
-                <a href="${p.ctaLink}" ${p.ctaLink.startsWith('http') ? 'target="_blank"' : ''} class="font-mono text-cyan text-sm hover:underline">${p.cta}</a>
+              <div class="pt-4 flex flex-wrap gap-6">
+                ${(p.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="font-mono text-cyan text-sm hover:underline">${l.label} -></a>`).join('')}
               </div>
             </div>
             <div class="flex-1 w-full">
-              <div class="media-slot h-64 md:h-full min-h-[250px]">
-                <span class="font-mono text-text-secondary text-sm">${p.mediaPlaceholder}</span>
-              </div>
+              <div class="media-slot h-64 md:h-full min-h-[250px]">${media(p)}</div>
             </div>
           </div>
-        </div>
-      `).join('');
+        </article>
+      `).join('') + `
+        <p class="font-mono text-text-secondary text-sm pt-4">More (Khatak, Ishara, Alfred, SkillSwap, Query-Flow…) on
+          <a href="https://github.com/Zeyad-101?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-cyan hover:underline">GitHub -></a></p>`;
     }
 
     const experienceList = document.getElementById('experience-list');
@@ -105,14 +108,14 @@ async function loadContent() {
             <h3 class="font-inter font-bold text-xl text-text-primary">${job.role}</h3>
             <div class="font-mono text-text-secondary text-sm mt-1">${job.org} \u00b7 ${job.dateRange}</div>
           </div>
-          <div class="flex flex-row flex-wrap gap-[36px] my-4" style="gap: 36px;">
+          ${job.metrics.length ? `<div class="flex flex-row flex-wrap gap-[36px] my-4" style="gap: 36px;">
             ${job.metrics.map(m => `
               <div class="flex flex-col gap-1">
                 <span class="font-mono font-bold text-[26px] text-cyan leading-none">${m.number}</span>
                 <span class="font-inter text-text-secondary text-[12px] font-normal leading-tight">${m.label}</span>
               </div>
             `).join('')}
-          </div>
+          </div>` : '<div class="my-4"></div>'}
           <ul class="space-y-3 font-inter text-text-secondary text-base leading-150 max-w-3xl">
             ${job.bullets.map(b => `<li>${b}</li>`).join('')}
           </ul>

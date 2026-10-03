@@ -1,19 +1,24 @@
-# Zeyad Waled — Portfolio
+# zeyad-101.github.io
 
-The codebase for my personal portfolio and case studies. The live site is built with Next.js (App Router), TypeScript, and Tailwind CSS, statically generating content from markdown files.
+Source for my portfolio: **https://zeyad-101.github.io**
 
-[**View Live Site**](https://zeyad-waled.vercel.app) *(Replace with actual URL once deployed)*
+A static site — plain HTML, CSS and JavaScript, no build step — deployed with GitHub Pages.
+Content lives in `data/*.json` and is rendered by `script.js`, so updating a project means
+editing JSON, not markup.
 
-## Top Projects
+| Path | What it holds |
+|---|---|
+| `index.html` | Page layout and sections |
+| `style.css` | Design tokens and utility classes |
+| `script.js` | Loads `data/*.json` and renders projects, experience, achievements, skills |
+| `data/` | Projects, experience, achievements, skills |
+| `assets/` | CV (PDF), avatar, project screenshots |
 
-1. [**JobOps** (Open Source Contribution)](projects/jobops/README.md) - Built scrapers and fixed CI/Docker issues for a trending job-tracking platform.
-2. [**AI Automation Pipelines**](docs/case-studies/ai-automation-pipelines.md) - Engineered 5 n8n workflows that cut 3+ hrs/week of manual work across client accounts.
-3. [**Hospital Management System**](docs/case-studies/hospital-management-system.md) - Led a team to build a high-performance C++/Qt6 desktop application.
+## Run locally
 
-## Structure
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-*   `/site` - The Next.js portfolio application.
-*   `/docs` - In-depth case studies and technical documentation.
-*   `/projects` - READMEs and sanitized code for individual projects.
-*   `/assets` - Demo media used across the site.
-*   `/about` - Bio and contact information.
+(Opening `index.html` directly won't work — the browser blocks `fetch()` of the JSON files from `file://`.)

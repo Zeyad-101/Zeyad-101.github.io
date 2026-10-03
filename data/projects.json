@@ -1,37 +1,118 @@
 [
   {
+    "slug": "zed",
+    "tag": "AI Systems",
+    "title": "ZED",
+    "featured": true,
+    "description": "A local-first AI agent runtime. Give it a goal and it picks a tool, runs it in a sandboxed workspace, feeds the result back to a model running on your own machine, and keeps going until it has an answer.",
+    "highlights": [
+      "Risk-tiered permission gate in front of every tool call, with an audit log of each decision",
+      "Scheduler for unattended jobs and SQLite-backed vector memory across restarts",
+      "Built in 19 incremental phases, guarded by 500+ pytest tests"
+    ],
+    "stack": ["Python", "Ollama", "SQLite", "PySide6", "pytest"],
+    "links": [{ "label": "Source", "url": "https://github.com/Zeyad-101/ZED" }],
+    "terminal": ["$ zed run \"summarize today's commits\"", "→ plan: github.list_commits", "→ gate: LOW risk · allowed", "→ tool ok · 14 commits", "✓ answer written · audit logged"]
+  },
+  {
+    "slug": "keypeer",
+    "tag": "Security",
+    "title": "Keypeer",
+    "featured": true,
+    "description": "A password manager that lives entirely in the browser. No server, no account, no network calls: the vault is encrypted on your machine and the key never touches disk.",
+    "highlights": [
+      "AES-256-GCM per entry, key derived with Argon2id and held only in background-worker memory",
+      "Login-form detection for one-click autofill and save prompts",
+      "Idle auto-lock, encrypted export/import, Vitest unit tests for crypto and storage"
+    ],
+    "stack": ["TypeScript", "React", "Vite", "Web Crypto", "Chrome MV3"],
+    "links": [{ "label": "Source", "url": "https://github.com/Zeyad-101/Keypeer" }],
+    "terminal": ["master password", "  └─ Argon2id ─► 256-bit key (memory only)", "entry ─► AES-256-GCM ─► chrome.storage.local", "idle timeout ─► key wiped ─► vault locked"]
+  },
+  {
     "slug": "jobops",
     "tag": "Open Source",
     "title": "JobOps",
-    "note": "",
-    "description": "Self-hosted job-tracking monorepo with 800+ users. Ranked #7 on contributor leaderboard. Built scrapers using Cheerio plugin pattern and fixed CI/Docker configs.",
-    "highlights": [
-      "Built WUZZUF & Khamsat scrapers via Cheerio",
-      "Fixed CI failures and Docker config issues",
-      "Contributed 4 merged PRs to monorepo"
-    ],
-    "stack": ["TypeScript", "Node.js", "Cheerio", "Docker"],
-    "mediaFolder": "projects/jobops",
-    "cta": "View contribution ->",
-    "ctaLink": "https://github.com/Zeyad-101/job-ops",
     "featured": false,
-    "mediaPlaceholder": "+ add screenshot / GIF"
+    "description": "Contributor to a self-hosted job-search platform with 800+ users that reached #3 on GitHub Trending for TypeScript.",
+    "highlights": [
+      "4 merged pull requests",
+      "Built the WUZZUF and Khamsat job-board extractors with unit-tested parsers",
+      "Wired both into the Docker build and the extractor health checks"
+    ],
+    "stack": ["TypeScript", "Node.js", "Cheerio", "Docker", "Vitest"],
+    "links": [
+      { "label": "Merged PRs", "url": "https://github.com/DaKheera47/job-ops/pulls?q=is%3Apr+author%3AZeyad-101+is%3Amerged" },
+      { "label": "Project", "url": "https://github.com/DaKheera47/job-ops" }
+    ],
+    "terminal": ["$ git log --author=Zeyad-101 --oneline", "feat(extractors): add WUZZUF HTML scraper (#502)", "feat(extractors): add Khamsat HTML scraper (#501)", "docs: add extractors to readme (#512)", "docs: add special thanks section (#507)"]
+  },
+  {
+    "slug": "git-pulse",
+    "tag": "Web App",
+    "title": "Git-Pulse",
+    "featured": false,
+    "description": "Turns any GitHub profile into an RPG character sheet: level, class, rank tier, achievements and a repo-hygiene radar, plus an AI-written roast.",
+    "highlights": [
+      "Scoring logic written as pure, unit-tested functions over the GitHub REST API",
+      "LLM roast via Groq with a deterministic fallback when no key is set",
+      "Client-side PNG card export on canvas"
+    ],
+    "stack": ["Next.js 16", "React 19", "TypeScript", "Tailwind", "Groq"],
+    "links": [
+      { "label": "Live demo", "url": "https://git-pulse-ruby.vercel.app/" },
+      { "label": "Source", "url": "https://github.com/Zeyad-101/Git-Pulse" }
+    ],
+    "terminal": ["GET /users/:name/repos", "  └─ analysis.ts ─► XP · class · rank", "  └─ hygiene.ts  ─► licenses · READMEs", "  └─ groq.ts     ─► roast (or fallback)", "card.png exported client-side"]
+  },
+  {
+    "slug": "gahez",
+    "tag": "Web App",
+    "title": "Gahez",
+    "featured": false,
+    "description": "Interview practice that adapts to the role you pick. Five questions, one at a time, with scored and specific feedback after each answer.",
+    "highlights": [
+      "Each answer scored on relevance, clarity, structure, specificity and confidence",
+      "Works with no account; bring-your-own Anthropic, OpenAI or Gemini key",
+      "Static site, no backend, responsive down to phone"
+    ],
+    "stack": ["JavaScript", "HTML", "CSS", "LLM APIs"],
+    "links": [
+      { "label": "Live demo", "url": "https://gahez-zeta.vercel.app/" },
+      { "label": "Source", "url": "https://github.com/Zeyad-101/Gahez" }
+    ],
+    "image": "assets/projects/gahez.webp",
+    "imageAlt": "Gahez feedback screen scoring an interview answer"
+  },
+  {
+    "slug": "trackwatch",
+    "tag": "Embedded",
+    "title": "TrackWatch",
+    "featured": false,
+    "description": "An ESP32 smartwatch prototype that reads heart rate, body temperature and motion and shows them live on an OLED screen.",
+    "highlights": [
+      "MAX30102, MPU-6050 and DS18B20 over I2C and OneWire at ~100 ms polling",
+      "±2 BPM against a clinical oximeter",
+      "8-hour stress runs with no crashes or sensor dropouts"
+    ],
+    "stack": ["C/C++", "Embedded C", "ESP32", "I2C", "OneWire"],
+    "links": [{ "label": "Source", "url": "https://github.com/Zeyad-101/TrackWatch-ESP32-Smart-Health-Monitoring-System" }],
+    "terminal": ["[  0.10s] HR  72 bpm   SpO2 98%", "[  0.10s] TEMP 36.7 °C", "[  0.10s] ACC  x 0.02 y -0.98 z 0.11", "[8h 00m] uptime ok · 0 dropouts"]
   },
   {
     "slug": "hospital-management-system",
-    "tag": "Academic",
+    "tag": "Team Project",
     "title": "Hospital Management System",
-    "note": "",
-    "description": "Desktop application built from scratch in C++ and Qt6 managing patients, staff, and medical records securely.",
-    "highlights": [
-      "Clean OOP architecture & data structures",
-      "GUI built completely in code (no Qt Designer)"
-    ],
-    "stack": ["C++17", "Qt 6", "OOP", "Data Structures"],
-    "mediaFolder": "projects/hms",
-    "cta": "View source ->",
-    "ctaLink": "https://github.com/Zeyad-101/Hospital_System",
     "featured": false,
-    "mediaPlaceholder": "+ add UI screenshot"
+    "description": "Desktop hospital app covering registration, scheduling, medical records and billing. I led the 7-person team from Figma designs to a working Qt6 GUI.",
+    "highlights": [
+      "Appointment booking with automatic double-booking checks",
+      "Billing with per-clinic pricing and insurance discounts",
+      "Object-oriented C++ with Qt6, sub-200 ms UI response on CRUD operations"
+    ],
+    "stack": ["C++17", "Qt6", "OOP", "Figma"],
+    "links": [{ "label": "Source", "url": "https://github.com/Zeyad-101/Hospital_System" }],
+    "image": "assets/projects/hms.webp",
+    "imageAlt": "Hospital Management System dashboard"
   }
 ]
